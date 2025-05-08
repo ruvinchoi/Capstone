@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://q4v45xlrqbmx"]
+
+[ext_resource type="Script" path="res://scripts/options_menu.gd" id="1_0hhxn"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 388.0
+offset_top = 112.0
+offset_right = 288.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+script = ExtResource("1_0hhxn")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Testing" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Testing"
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(33.5, 33)
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Testing" to="." method="_on_testing_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Testing" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_quit_pressed"]
