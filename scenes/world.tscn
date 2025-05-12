@@ -1,17 +1,73 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckawfpdlw8bi1"]
+[gd_scene load_steps=9 format=3 uid="uid://ckawfpdlw8bi1"]
 
 [ext_resource type="Script" path="res://scripts/StaticBody2D.gd" id="1_od56n"]
 [ext_resource type="PackedScene" uid="uid://b56ny1rlff8vh" path="res://scenes/Player.tscn" id="2_ok5ji"]
+[ext_resource type="PackedScene" uid="uid://bag0gc7xqjy6q" path="res://scenes/pelevate.tscn" id="3_4fn2g"]
+[ext_resource type="Texture2D" uid="uid://dy72iqiygqa2w" path="res://icon.svg" id="5_k4e4c"]
+
+[sub_resource type="Animation" id="Animation_dw1lu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-799, -198)]
+}
+
+[sub_resource type="Animation" id="Animation_wrmk5"]
+resource_name = "down"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-799, -498), Vector2(-799, -198)]
+}
+
+[sub_resource type="Animation" id="Animation_18x87"]
+resource_name = "up"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-799, -198), Vector2(-799, -498)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iv51s"]
+_data = {
+"RESET": SubResource("Animation_dw1lu"),
+"down": SubResource("Animation_wrmk5"),
+"up": SubResource("Animation_18x87")
+}
 
 [node name="World" type="Node"]
 
-[node name="platform test" type="StaticBody2D" parent="."]
+[node name="land tets" type="StaticBody2D" parent="."]
 script = ExtResource("1_od56n")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="platform test"]
-polygon = PackedVector2Array(-43, -53, -43, -53, -1705, -45, -1715, -197, -51, -199)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="land tets"]
+polygon = PackedVector2Array(-41, 224, -1749, 200, -1748, -205, -51, -199)
 
-[node name="Polygon2D" type="Polygon2D" parent="platform test"]
+[node name="Polygon2D" type="Polygon2D" parent="land tets"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_ok5ji")]
 position = Vector2(-917, -417)
@@ -20,3 +76,16 @@ scale = Vector2(0.2, 0.2)
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(6, 12)
 zoom = Vector2(2, 2)
+
+[node name="AnimatableBody2D" parent="." instance=ExtResource("3_4fn2g")]
+position = Vector2(-799, -198)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D"]
+libraries = {
+"": SubResource("AnimationLibrary_iv51s")
+}
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-482, -408)
+scale = Vector2(1.92969, 1.50781)
+texture = ExtResource("5_k4e4c")
