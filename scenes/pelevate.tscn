@@ -24,7 +24,7 @@ scale = Vector2(0.960911, 120)
 shape = SubResource("RectangleShape2D_q5qoi")
 
 [node name="wait" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 3.25
 one_shot = true
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -33,7 +33,6 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(18.8073, -71.1111)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_tw6s1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]

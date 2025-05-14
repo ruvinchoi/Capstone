@@ -1,6 +1,8 @@
-res://scenes/pelevate.tscn
-res://scripts/pelevate.gd
 res://scenes/world.tscn
 res://scenes/menu.tscn
 res://scenes/options_menu.tscn
+res://scenes/pelevate.tscn
+res://scripts/pelevate.gd
 res://scenes/Player.tscn
+res://scripts/Player.gd
+res://scripts/StaticBody2D.gd
