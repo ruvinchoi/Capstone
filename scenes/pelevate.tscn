@@ -1,27 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://bag0gc7xqjy6q"]
+[gd_scene load_steps=4 format=3 uid="uid://bag0gc7xqjy6q"]
 
 [ext_resource type="Script" path="res://scripts/pelevate.gd" id="1_bk7tw"]
-[ext_resource type="Texture2D" uid="uid://dy72iqiygqa2w" path="res://icon.svg" id="2_uyhrw"]
+[ext_resource type="Texture2D" uid="uid://c3ojv3m0bdeml" path="res://assets/platform(1).png" id="2_aoc5y"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5qoi"]
-size = Vector2(41.9593, 14.9537)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tw6s1"]
-size = Vector2(20, 157.778)
+[sub_resource type="CircleShape2D" id="CircleShape2D_apbfn"]
+radius = 8.09202
 
 [node name="AnimatableBody2D" type="AnimatableBody2D"]
+z_index = -1
 scale = Vector2(4.36, 0.36)
 script = ExtResource("1_bk7tw")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(1, 44.6667)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["platform"]]
-position = Vector2(20.3889, 897.222)
-scale = Vector2(0.960911, 120)
-shape = SubResource("RectangleShape2D_q5qoi")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(22.7064, 1430.56)
+scale = Vector2(0.234127, 3.32039)
+texture = ExtResource("2_aoc5y")
 
 [node name="wait" type="Timer" parent="."]
 wait_time = 3.25
@@ -32,13 +25,13 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(18.8073, -71.1111)
-shape = SubResource("RectangleShape2D_tw6s1")
+position = Vector2(20.4128, -141.667)
+scale = Vector2(0.93578, 11.2222)
+shape = SubResource("CircleShape2D_apbfn")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-position = Vector2(19.0367, -52.7778)
-scale = Vector2(0.0788776, 1)
-texture = ExtResource("2_uyhrw")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PackedVector2Array(19.9541, -16.6667, 36.4679, -11.1111, 37.3853, 180.556, 44.0367, 197.222, 44.9541, 650, 46.3303, 1055.56, 50.6881, 1136.11, 46.789, 1152.78, 46.3303, 1519.44, 46.789, 1836.11, 47.9358, 2150, 47.9358, 2425, 49.7706, 2550, 41.7431, 2677.78, 26.1468, 2763.89, 13.7615, 2758.33, 0, 2711.11, 0.458716, 2258.33, -1.83486, 1561.11, -4.12844, 1438.89, -3.21101, 1255.56, 1.37615, 1125, -1.83486, 997.222, 1.37615, 822.222, 1.37615, 672.222, -3.66972, 666.667, -2.75229, 563.889, -4.12844, 494.444, -5.50459, 422.222, -4.81651, 347.222, -4.58716, 311.111, -4.58716, 150, 1.83486, -2.77778)
 
 [connection signal="timeout" from="wait" to="." method="_on_wait_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,5 +1,7 @@
 extends CharacterBody2D
 #hello
+@onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var coyote_timer = $coyoteTimer
 
 const SPEED = 450.0
 const JUMP_VELOCITY = -415.0
@@ -15,9 +17,12 @@ func _physics_process(delta):
 	handleJump()
 	var direction = Input.get_axis("a", "d")
 	handlePlayerMovement(direction)
-
+	updateAnimation(direction)
+	var wasOnFloor = is_on_floor()
 	move_and_slide()
-	
+	var justLeftFloor = wasOnFloor and not is_on_floor() and velocity.y >= 0
+	if justLeftFloor:
+		coyote_timer.start()
 	
 	
 func handleGravity(delta):
@@ -25,8 +30,9 @@ func handleGravity(delta):
 		velocity.y += gravity * delta
 
 func handleJump():
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	if is_on_floor() or coyote_timer.time_left > 0.0:
+		if Input.is_action_just_pressed("ui_accept"):
+			velocity.y = JUMP_VELOCITY
 		
 func handlePlayerMovement(direction):
 	if direction:
@@ -38,3 +44,11 @@ func _on_area_2d_area_entered(body):
 	if body.is_in_group("platform"):
 		onPlatform = true
 		
+func updateAnimation(input_axis):
+	if input_axis != 0:
+		animated_sprite_2d.flip_h = (input_axis<0)
+		animated_sprite_2d.play("run")
+	else:
+		animated_sprite_2d.play("idle")
+	if not is_on_floor():
+		animated_sprite_2d.play("jump")
