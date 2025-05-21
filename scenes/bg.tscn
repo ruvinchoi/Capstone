@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://s7f8t1qjt7yu"]
+
+[ext_resource type="Texture2D" uid="uid://bjlnarwehygq2" path="res://assets/cave bg-1.png.png" id="1_75drp"]
+[ext_resource type="Texture2D" uid="uid://bapvopkc1jnka" path="res://assets/cave bg-2.png.png" id="2_d7uoo"]
+[ext_resource type="Texture2D" uid="uid://b0h031j0wumcd" path="res://assets/cave bg-3.png.png" id="3_qj7pg"]
+
+[node name="bg" type="Node2D"]
+scale = Vector2(0.7, 0.7)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="far" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(4800, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/far"]
+texture = ExtResource("3_qj7pg")
+
+[node name="mid" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(4800, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/mid"]
+texture = ExtResource("2_d7uoo")
+
+[node name="fore" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_offset = Vector2(0, 130)
+motion_mirroring = Vector2(4800, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/fore"]
+texture = ExtResource("1_75drp")

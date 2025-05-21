@@ -1,5 +1,2 @@
+res://scenes/bg.tscn
 res://scenes/puzzle_1_1.tscn
-res://scenes/Player.tscn
-res://scenes/world.tscn
-res://scenes/pelevate.tscn
-res://scripts/Player.gd
