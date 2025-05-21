@@ -3,8 +3,8 @@ extends CharacterBody2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var coyote_timer = $coyoteTimer
 
-const SPEED = 450.0
-const JUMP_VELOCITY = -415.0
+const SPEED = 1200.0
+const JUMP_VELOCITY = -1800
 var onPlatform = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.

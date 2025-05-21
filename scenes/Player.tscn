@@ -5,12 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://bdy1t0jkkwqhy" path="res://assets/player jump.png" id="3_7d3lk"]
 [ext_resource type="Texture2D" uid="uid://bp5bh7r3fl8ao" path="res://assets/player run.png" id="4_n8xkc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qlvdj"]
-size = Vector2(90, 250)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kv5j3"]
-size = Vector2(93.5, 140)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_67kyd"]
 atlas = ExtResource("2_aci40")
 region = Rect2(0, 0, 320, 320)
@@ -176,29 +170,35 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qlvdj"]
+size = Vector2(90, 271.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kv5j3"]
+size = Vector2(81.1875, 146)
+
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
-scale = Vector2(0.2, 0.2)
 collision_layer = 3
 collision_mask = 3
+floor_max_angle = 1.61094
 script = ExtResource("1_g04ia")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(58, -49)
+sprite_frames = SubResource("SpriteFrames_5y4pt")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-9.99999, 10)
+position = Vector2(42, -43.75)
 shape = SubResource("RectangleShape2D_qlvdj")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-5, 130)
+position = Vector2(44, 49)
 shape = SubResource("RectangleShape2D_kv5j3")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(4.99997, -5)
-sprite_frames = SubResource("SpriteFrames_5y4pt")
-animation = &"jump"
-autoplay = "idle"
 
 [node name="coyoteTimer" type="Timer" parent="."]
 wait_time = 0.35
