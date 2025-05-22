@@ -1,29 +1,34 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1747848684
-Area2D.gd::GDScript::-1::1747454899::0::1::::<>Area2D<>::
+::res://::1747898272
 icon.svg::CompressedTexture2D::8911508885509062540::1746588129::1746724580::1::::<><>::
 README.md::TextFile::-1::1746588129::0::1::::<><>::
-::res://assets/::1747847231
-cave bg-1.png.png::CompressedTexture2D::3041618679710710531::1747846466::1747846984::1::::<><>::
-cave bg-2.png.png::CompressedTexture2D::2418687211391042992::1747846475::1747847231::1::::<><>::
-cave bg-3.png.png::CompressedTexture2D::4157161726647256279::1747846485::1747846984::1::::<><>::
+::res://assets/::1747898272
+cave bg-1.png.png::CompressedTexture2D::2216825410770896263::1747858179::1747858292::1::::<><>::
+cave bg-2.png.png::CompressedTexture2D::4607432282822958586::1747858184::1747858292::1::::<><>::
+cave bg-3.png.png::CompressedTexture2D::3678212232703865377::1747858192::1747858292::1::::<><>::
 icon.svg::CompressedTexture2D::144352056695583923::1746588155::1746588725::1::::<><>::
+platform hor.png::CompressedTexture2D::9129343047986762608::1747898246::1747898273::1::::<><>::
 platform(1).png::CompressedTexture2D::6767615722743648635::1747772572::1747772582::1::::<><>::
 player idle.png::CompressedTexture2D::9154363326985651263::1747713601::1747713615::1::::<><>::
 player jump.png::CompressedTexture2D::2648146180056348310::1747713601::1747713615::1::::<><>::
 player run.png::CompressedTexture2D::3501259596723704570::1747713586::1747713615::1::::<><>::
 tilemap test(1).png::CompressedTexture2D::5888079644040914767::1747845958::1747845988::1::::<><>::
-::res://scenes/::1747848529
-bg.tscn::PackedScene::1329822828625535596::1747848528::0::1::::<><>::uid://bjlnarwehygq2::::res://assets/cave bg-1.png.png<>uid://bapvopkc1jnka::::res://assets/cave bg-2.png.png<>uid://b0h031j0wumcd::::res://assets/cave bg-3.png.png
-menu.tscn::PackedScene::5716863817150161053::1747196230::0::1::::<><>::res://scripts/menu.gd
+::res://scenes/::1747897721
+bg.tscn::PackedScene::1329822828625535596::1747859836::0::1::::<><>::uid://6t3148bsoy28::::res://assets/cave bg-1.png.png<>uid://b6v40bpeapays::::res://assets/cave bg-2.png.png<>uid://bsn0vaq8l8db2::::res://assets/cave bg-3.png.png
+menu.tscn::PackedScene::5716863817150161053::1747860645::0::1::::<><>::res://scripts/menu.gd
 options_menu.tscn::PackedScene::1184216909701733091::1747196230::0::1::::<><>::res://scripts/options_menu.gd
-pelevate.tscn::PackedScene::2400335745347270966::1747846200::0::1::::<><>::res://scripts/pelevate.gd<>uid://c3ojv3m0bdeml::::res://assets/platform(1).png
-Player.tscn::PackedScene::4556915275545092717::1747846200::0::1::::<><>::res://scripts/Player.gd<>uid://d3opa5wt7we2j::::res://assets/player idle.png<>uid://bdy1t0jkkwqhy::::res://assets/player jump.png<>uid://bp5bh7r3fl8ao::::res://assets/player run.png
-puzzle_1_1.tscn::PackedScene::8213321342060103328::1747848529::0::1::::<><>::uid://cp5h2uclp5jg6::::res://assets/tilemap test(1).png<>uid://b56ny1rlff8vh::::res://scenes/Player.tscn<>uid://bag0gc7xqjy6q::::res://scenes/pelevate.tscn<>uid://s7f8t1qjt7yu::::res://scenes/bg.tscn
-world.tscn::PackedScene::5476075299592065590::1747846200::0::1::::<><>::res://scripts/StaticBody2D.gd<>uid://b56ny1rlff8vh::::res://scenes/Player.tscn<>uid://bag0gc7xqjy6q::::res://scenes/pelevate.tscn<>uid://dy72iqiygqa2w::::res://icon.svg
-::res://scripts/::1747800117
-menu.gd::GDScript::-1::1746724588::0::1::::<>Control<>::
+pelevate_h.tscn::PackedScene::1263817872688928501::1747897721::0::1::::<><>::uid://c3ojv3m0bdeml::::res://assets/platform(1).png<>res://scripts/pelevate_h.gd
+pelevate_V.tscn::PackedScene::2400335745347270966::1747846200::0::1::::<><>::res://scripts/pelevate.gd<>uid://c3ojv3m0bdeml::::res://assets/platform(1).png
+Player.tscn::PackedScene::4556915275545092717::1747896553::0::1::::<><>::res://scripts/Player.gd<>uid://d3opa5wt7we2j::::res://assets/player idle.png<>uid://bdy1t0jkkwqhy::::res://assets/player jump.png<>uid://bp5bh7r3fl8ao::::res://assets/player run.png
+puzzle_1_1.tscn::PackedScene::8213321342060103328::1747897015::0::1::::<><>::uid://b56ny1rlff8vh::::res://scenes/Player.tscn<>uid://bag0gc7xqjy6q::::res://scenes/pelevate_V.tscn
+puzzle_1_2.tscn::PackedScene::1221405220048031046::1747897015::0::1::::<><>::uid://cp5h2uclp5jg6::::res://assets/tilemap test(1).png<>uid://b56ny1rlff8vh::::res://scenes/Player.tscn<>uid://bag0gc7xqjy6q::::res://scenes/pelevate_V.tscn<>res://scripts/pelevateStay.gd
+world.tscn::PackedScene::5476075299592065590::1747897015::0::1::::<><>::res://scripts/StaticBody2D.gd<>uid://b56ny1rlff8vh::::res://scenes/Player.tscn<>uid://bag0gc7xqjy6q::::res://scenes/pelevate_V.tscn<>uid://dy72iqiygqa2w::::res://icon.svg
+::res://scripts/::1747898272
+Area2D.gd::GDScript::-1::1747454899::0::1::::<>Area2D<>::
+menu.gd::GDScript::-1::1747858627::0::1::::<>Control<>::
 options_menu.gd::GDScript::-1::1746724588::0::1::::<>Control<>::
 pelevate.gd::GDScript::-1::1747194964::0::1::::<>AnimatableBody2D<>::
-Player.gd::GDScript::-1::1747800117::0::1::::<>CharacterBody2D<>::
+pelevateStay.gd::GDScript::-1::1747895174::0::1::::<>AnimatableBody2D<>::
+pelevate_h.gd::GDScript::-1::1747897665::0::1::::<>Node2D<>::
+Player.gd::GDScript::-1::1747896308::0::1::::<>CharacterBody2D<>::
 StaticBody2D.gd::GDScript::-1::1747195607::0::1::::<>StaticBody2D<>::

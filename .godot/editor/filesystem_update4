@@ -1,2 +1,10 @@
-res://scenes/bg.tscn
+res://scenes/pelevate_h.tscn
+res://scripts/pelevate_h.gd
+res://scripts/pelevate.gd
+res://scenes/world.tscn
+res://scenes/pelevate_V.tscn
 res://scenes/puzzle_1_1.tscn
+res://scenes/puzzle_1_3.tscn
+res://scenes/puzzle_1_2.tscn
+res://scenes/Player.tscn
+res://scripts/Player.gd

@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var coyote_timer = $coyoteTimer
 
 const SPEED = 1200.0
-const JUMP_VELOCITY = -1800
+const JUMP_VELOCITY = -2000
 var onPlatform = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -26,11 +26,11 @@ func _physics_process(delta):
 	
 	
 func handleGravity(delta):
-	if not is_on_floor():
+	if not is_on_floor() or coyote_timer.time_left > 0.0:
 		velocity.y += gravity * delta
 
 func handleJump():
-	if is_on_floor() or coyote_timer.time_left > 0.0:
+	if is_on_floor():
 		if Input.is_action_just_pressed("ui_accept"):
 			velocity.y = JUMP_VELOCITY
 		

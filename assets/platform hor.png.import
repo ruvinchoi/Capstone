@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsn0vaq8l8db2"
-path="res://.godot/imported/cave bg-3.png.png-1cd7d30a32dacc309420d9d2f6080e99.ctex"
+uid="uid://d3ck7f16iymiq"
+path="res://.godot/imported/platform hor.png-12043e271f9619979a992ddbc80483db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cave bg-3.png.png"
-dest_files=["res://.godot/imported/cave bg-3.png.png-1cd7d30a32dacc309420d9d2f6080e99.ctex"]
+source_file="res://assets/platform hor.png"
+dest_files=["res://.godot/imported/platform hor.png-12043e271f9619979a992ddbc80483db.ctex"]
 
 [params]
 
