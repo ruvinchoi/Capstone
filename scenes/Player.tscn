@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://b56ny1rlff8vh"]
+[gd_scene load_steps=30 format=3 uid="uid://b56ny1rlff8vh"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_g04ia"]
 [ext_resource type="Texture2D" uid="uid://d3opa5wt7we2j" path="res://assets/player idle.png" id="2_aci40"]
@@ -171,14 +171,17 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qlvdj"]
-size = Vector2(127, 262.5)
+size = Vector2(74, 262.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kv5j3"]
 size = Vector2(42, 146)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pwxhn"]
+size = Vector2(82.5, 259.5)
+
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
-collision_layer = 3
-collision_mask = 3
+collision_layer = 7
+collision_mask = 7
 script = ExtResource("1_g04ia")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -190,7 +193,7 @@ autoplay = "idle"
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(41.5, -35)
+position = Vector2(43, -35)
 shape = SubResource("RectangleShape2D_qlvdj")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -203,4 +206,13 @@ shape = SubResource("RectangleShape2D_kv5j3")
 wait_time = 0.35
 one_shot = true
 
+[node name="hazard detector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hazard detector"]
+position = Vector2(42, -32)
+shape = SubResource("RectangleShape2D_pwxhn")
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="hazard detector" to="." method="_on_hazard_detector_area_entered"]

@@ -1,0 +1,14 @@
+res://scenes/bg.tscn::0f4f721ee1d440c4a63e63b16c15a269::1747859836::res://.godot/exported/133200997/export-81131b8fc689928ee1fd3db9d053cb56-bg.scn
+res://scenes/checkpoint.tscn::1894827dc8575c201966835de763a9d4::1747981070::res://.godot/exported/133200997/export-482b6a8501cb9cd5cb5e89d8c0a2c549-checkpoint.scn
+res://scenes/killzone.tscn::4446005cb44a776e4e995861afa2f707::1747978750::res://.godot/exported/133200997/export-494bf1445653c44a49a39c8f8b1ce8d0-killzone.scn
+res://scenes/level_1.tscn::6c129954c168bf459e9cc0fd4b5e25fc::1747981070::res://.godot/exported/133200997/export-6887eba858c6ae48b5ca13a7525fa2f9-level_1.scn
+res://scenes/menu.tscn::8ba02effd7d241cb7b1d698db151f3a9::1747981070::res://.godot/exported/133200997/export-1ce5c86e8ca186dcaaeaa8726f1268db-menu.scn
+res://scenes/options_menu.tscn::517445247f14e3552ac21ab3e215b4c6::1747196230::res://.godot/exported/133200997/export-3f3f0a55366671792f60b5e27257c793-options_menu.scn
+res://scenes/pelevate_h.tscn::1d32a8cc01f60295d142471bd6f917e1::1747978750::res://.godot/exported/133200997/export-2d676c16bbdc1cf6e966222fb7508c22-pelevate_h.scn
+res://scenes/pelevate_V.tscn::e0cfa1bdb91c61002352102986d79973::1747935219::res://.godot/exported/133200997/export-59cb14951eb458eb29c1909f69e050ad-pelevate_V.scn
+res://scenes/Player.tscn::70de44c4fb1ed9ab93f3a09ea0023cbe::1747981070::res://.godot/exported/133200997/export-e8220e74d1354b9e6b168b513689419c-Player.scn
+res://scenes/puzzle_1_1.tscn::d39400631dcd25defc348438997265dd::1747976133::res://.godot/exported/133200997/export-4f085d6ae94d6834200ba49ece77f8ff-puzzle_1_1.scn
+res://scenes/puzzle_1_2.tscn::de9e86c899b8c536420e557103828d2e::1747978750::res://.godot/exported/133200997/export-713d5379aa819a0333023c58350ae96b-puzzle_1_2.scn
+res://scenes/puzzle_1_3.tscn::bae3fb9d4741e5cd8c9ebd8b59e93253::1747981070::res://.godot/exported/133200997/export-150c15445c625c3a364db281c283e682-puzzle_1_3.scn
+res://scenes/puzzle_1_4.tscn::53e9891f28fbf143cc26236fb5cf34ae::1747981070::res://.godot/exported/133200997/export-b72f06af4b6fdd734986176c2970ebfd-puzzle_1_4.scn
+res://scenes/world.tscn::96e11b3fe303d81ca0056b49d17a9e3c::1747977107::res://.godot/exported/133200997/export-6b9c1b1fd6ae6f795188dfdc89e222b0-world.scn

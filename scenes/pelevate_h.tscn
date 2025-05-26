@@ -7,7 +7,7 @@
 size = Vector2(939, 216)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3d1jm"]
-radius = 8.66706
+radius = 14.1669
 
 [node name="pelevate_H" type="AnimatableBody2D"]
 script = ExtResource("1_c18e8")
@@ -29,7 +29,7 @@ one_shot = true
 scale = Vector2(12, 12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(87.3333, -31.3333)
+position = Vector2(84.1667, -31)
 shape = SubResource("CircleShape2D_3d1jm")
 
 [connection signal="timeout" from="wait" to="." method="_on_wait_timeout"]

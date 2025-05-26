@@ -2,11 +2,11 @@ extends CharacterBody2D
 #hello
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var coyote_timer = $coyoteTimer
+@onready var respawn_loc = global_position
 
 const SPEED = 1200.0
 const JUMP_VELOCITY = -2000
 var onPlatform = false
-
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -52,3 +52,14 @@ func updateAnimation(input_axis):
 		animated_sprite_2d.play("idle")
 	if not is_on_floor():
 		animated_sprite_2d.play("jump")
+
+func respawn(respawnLoc):
+	position = respawnLoc
+
+
+func _on_hazard_detector_area_entered(area):
+	if area.is_in_group("hazard"):
+		global_position = respawn_loc
+	elif  area.is_in_group("checkpoint"):
+		respawn_loc = global_position
+		print("spawn set")

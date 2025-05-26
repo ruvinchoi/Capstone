@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtcmjc2v0ahor"]
+
+[ext_resource type="Script" path="res://scripts/checkpoint.gd" id="1_etncb"]
+[ext_resource type="Texture2D" uid="uid://i1n6ybnd6hm7" path="res://assets/flower.png" id="1_st3iv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tlvfn"]
+radius = 129.062
+
+[node name="checkpoint" type="Area2D" groups=["checkpoint"]]
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("1_etncb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -71)
+shape = SubResource("CircleShape2D_tlvfn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.5, 0)
+scale = Vector2(2, 2.051)
+texture = ExtResource("1_st3iv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
